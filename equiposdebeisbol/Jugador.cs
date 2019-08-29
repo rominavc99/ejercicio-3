@@ -17,6 +17,11 @@ namespace equiposdebeisbol
             Numero = "sin registrar";
 
         }
+        public Jugador(string nombre)
+        {
+            Nombre = nombre;
+          
+        }
 
         public Jugador(string nombre, string numero)
         {

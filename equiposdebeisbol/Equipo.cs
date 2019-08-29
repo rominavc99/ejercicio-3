@@ -27,7 +27,8 @@ namespace equiposdebeisbol
             NombreEq = nombreeq;
             CiudadOrigen = "sin registrar";
             Entrenador = "Sin registrar";
-            
+            Jugadores = new List<Jugador>();
+
         }
 
 

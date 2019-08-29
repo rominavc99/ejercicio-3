@@ -11,38 +11,70 @@ namespace equiposdebeisbol
         static void Main(string[] args)
         {
             List<Jugador> jugadores = new List<Jugador>();
+            List<Equipo> equipos =
+                new List<Equipo>();
 
-            Jugador Equipo1 =
-                new Jugador("Chayanne", "1233r3");
+            Equipo equipo1 = new Equipo("comunismo");
+            equipo1.Entrenador = "patio";
+            equipo1.CiudadOrigen = "df";
 
-            Jugador Equipo2 =
-                new Jugador("Chabelo", "2343r");
+            equipo1.Jugadores.Add(
+                new Jugador("comunista 1", "qweq2"));
+            equipo1.Jugadores.Add(
+                new Jugador("comunista 2", "qweq2"));
+            equipo1.Jugadores.Add(
+                new Jugador("comunista 3", "qweq2"));
+            equipo1.Jugadores.Add(
+                new Jugador("comunista 4", "qweq2"));
+            equipo1.Jugadores.Add(
+                new Jugador("comunista 5", "qweq2"));
+            equipo1.Jugadores.Add(
+                new Jugador("comunista 6", "qweq2"));
+            equipo1.Jugadores.Add(
+                new Jugador("comunista 7", "qweq2"));
+            equipo1.Jugadores.Add(
+                new Jugador("comunista 8", "qweq2"));
+            equipo1.Jugadores.Add(
+                new Jugador("comunista 9", "qweq2"));
 
-            jugadores.Add(Equipo1);
-            jugadores.Add(Equipo2);
+            Equipo equipo2 = new Equipo("capitalista");
+            equipo2.Entrenador = "chayanne";
+            equipo2.CiudadOrigen = "San Luis Potosi";
 
-            Jugador Patiño = new Jugador ("Patiño1","12341");
-            Jugador Patiño2 = new Jugador("Patiño2", "12342");
-            Jugador Patiño3 = new Jugador("Patiño3", "12343");
-            Jugador Patiño4 = new Jugador("Patiño4", "12344");
-            Jugador Patiño5 = new Jugador("Patiño5", "12345");
-            Jugador Patiño6 = new Jugador("Patiño6", "12346");
-            Jugador Patiño7 = new Jugador("Patiño7", "12347");
-            Jugador Patiño8 = new Jugador("Patiño8", "12348");
-            Jugador Patiño9 = new Jugador("Patiño9", "12349");
+            equipo2.Jugadores.Add(
+               new Jugador("capitalista 1", "qweq3"));
+            equipo2.Jugadores.Add(
+                new Jugador("capitalista 2", "qweq3"));
+            equipo2.Jugadores.Add(
+                new Jugador("capitalista 3", "qweq3"));
+            equipo2.Jugadores.Add(
+                new Jugador("capitalista 4", "qweq3"));
+            equipo2.Jugadores.Add(
+                new Jugador("capitalista 5", "qweq3"));
+            equipo2.Jugadores.Add(
+                new Jugador("capitalista 6", "qweq3"));
+            equipo2.Jugadores.Add(
+                new Jugador("capitalista 7", "qweq3"));
+            equipo2.Jugadores.Add(
+                new Jugador("capitalista 8", "qweq3"));
+            equipo2.Jugadores.Add(
+                new Jugador("capitalista 9", "qweq3"));
 
-            Jugador Chayanne = new Jugador("Chayanne", "1234er");
-            Jugador Chayanne1 = new Jugador("Chayanne1", "1234er1");
-            Jugador Chayanne2 = new Jugador("Chayanne2", "1234er2");
-            Jugador Chayanne3 = new Jugador("Chayanne3", "1234er3");
-            Jugador Chayanne4 = new Jugador("Chayanne4", "1234er4");
-            Jugador Chayanne5 = new Jugador("Chayanne5", "1234er5");
-            Jugador Chayanne6 = new Jugador("Chayanne6", "1234er6");
-            Jugador Chayanne7 = new Jugador("Chayanne7", "1234er7");
-            Jugador Chayanne8 = new Jugador("Chayanne8", "1234er8");
 
-            Equipo1.Jugadores.Add(Patiño);
+            equipos.Add(equipo1);
+            equipos.Add(equipo2);
 
+            foreach (Equipo equipo in equipos) 
+            {
+                Console.WriteLine( " * " + equipo.NombreEq + " de " + equipo.CiudadOrigen);
+
+                foreach(Jugador jugador in equipo.Jugadores)
+                {
+                    Console.WriteLine("-" +
+                        jugador.Nombre + " " +
+                        jugador.Numero);
+                }
+            }
 
         }
     }
